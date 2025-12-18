@@ -1,0 +1,12 @@
+services:
+  icad_dispatch:
+    image: thegreatcodeholio/icad_dispatch:latest
+    user: "icad_dispatch"
+    env_file:
+      - .env
+    ports:
+      - "9911:9911"
+    volumes:
+      - ./log:/app/log        # ensure host perms: chown -R 9911:9911 log var
+      - ./var:/app/var
+    restart: unless-stopped
