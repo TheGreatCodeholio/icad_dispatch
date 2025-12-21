@@ -95,6 +95,11 @@ Edit `.env` and fill in the fields described below.
 - **Logging**
    - `LOG_LEVEL` — Numeric log level (e.g., 1=DEBUG, 2=INFO, 3=WARNING, 4=ERROR, 5=CRITICAL).
 
+- **Timezone**
+  - `TIMEZONE` — IANA timezone (via Python `zoneinfo`) 
+    - Full list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. 
+    - Examples: `America/New_York`, `America/Chicago`, `America/Denver`, `America/Los_Angeles`, `UTC`
+
 - **Base URL**
    - `BASE_URL` — Publicly reachable base URL (scheme + host[:port]) used in links and some redirects.
 
@@ -118,6 +123,9 @@ Edit `.env` and fill in the fields described below.
 ```env
 # ─────────────── Logging ───────────────
 LOG_LEVEL=1
+
+# ─────────────── Timezone ───────────────
+TIMEZONE=America/New_York
 
 # ─────────────── Base URL ───────────────
 BASE_URL=http://192.168.1.104:9911
