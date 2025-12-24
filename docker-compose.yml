@@ -9,4 +9,5 @@ services:
     volumes:
       - ./log:/app/log        # ensure host perms: chown -R 9911:9911 log var
       - ./var:/app/var
+      - ./audio:/app/static/audio
     restart: unless-stopped

@@ -67,13 +67,13 @@ Ensure the directory has the required structure for the application to function 
 Run the following commands:
 ```bash
 # Create the required directories
-mkdir -p log var
+mkdir -p log var audio
 
 # Change ownership to the non-root docker user
-sudo chown -R icad_dispatch:icad_dispatch log var
+sudo chown -R icad_dispatch:icad_dispatch log var audio
 ```
 
-The `log` directory will store logs, and the `var` directory will store a sqlite database and other variables.
+The `log` directory will store logs `audio` will hold saved audio if storing audio locally, and the `var` directory will store a sqlite database and other variables.
 
 ---
 
