@@ -133,11 +133,11 @@ BASE_URL=http://192.168.1.104:9911
 # ─────────────── Cookies ───────────────
 SESSION_COOKIE_SECURE=False
 SESSION_COOKIE_DOMAIN=192.168.1.104
-SESSION_COOKIE_NAME=icad_transcribe
+SESSION_COOKIE_NAME=icad_dispatch
 SESSION_COOKIE_PATH=/
 
 # ─────────────── SQLite ───────────────
-SQLITE_DATABASE_PATH=var/icad_transcribe.db
+SQLITE_DATABASE_PATH=var/icad_dispatch.db
 
 # ─────────────── Root User Bootstrap ───────────────
 # Root username (optional, defaults to "root" if omitted)
@@ -197,12 +197,12 @@ docker ps -a
    ``bash
    docker logs -f <container_id_or_name>
    ``
-- Replace `<container_id_or_name>` with the actual container ID or name (e.g., `icad_transcribe`).
+- Replace `<container_id_or_name>` with the actual container ID or name (e.g., `icad_dispatch`).
 
 #### Example
 To view logs for the Flask application:
 ```bash
-docker logs -f icad_transcribe
+docker logs -f icad_dispatch
 ```
 
 This will show real-time logs to help you verify that the services are starting as expected.
@@ -216,8 +216,8 @@ This will show real-time logs to help you verify that the services are starting 
 
 3. **Restrict Permissions**: Allow only the `icad_dispatch` group and `your_user` access to the application directory and logs:
    ```bash
-   sudo chown your_user:icad_dispatch /home/your_user/icad_transcribe
-   sudo chmod -R 760 /home/your_user/icad_transcribe
+   sudo chown your_user:icad_dispatch /home/your_user/icad_dispatch
+   sudo chmod -R 760 /home/your_user/icad_dispatch
    ```
 4. **Use HTTPS**: Ensure the application is accessed via HTTPS in production to secure data in transit. This can be done with NGINX proxy.
 
